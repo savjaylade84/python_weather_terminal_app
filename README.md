@@ -1,5 +1,5 @@
 ## Weather Terminal App
-### terminal based app that uses openweathermap api and python for broadcasting weather
+### terminal based app that uses openweathermap api and python to weather forecast on all the cities around the world
 
 dependent packages
 
