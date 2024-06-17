@@ -1,0 +1,43 @@
+{
+    "coord": {
+        "lon": 120.9955,
+        "lat": 14.5438
+    },
+    "weather": [
+        {
+            "id": 803,
+            "main": "Clouds",
+            "description": "broken clouds",
+            "icon": "04n"
+        }
+    ],
+    "base": "stations",
+    "main": {
+        "temp": 303.91,
+        "feels_like": 310.91,
+        "temp_min": 303.75,
+        "temp_max": 304.26,
+        "pressure": 1010,
+        "humidity": 78
+    },
+    "visibility": 10000,
+    "wind": {
+        "speed": 3.09,
+        "deg": 260
+    },
+    "clouds": {
+        "all": 75
+    },
+    "dt": 1718620956,
+    "sys": {
+        "type": 1,
+        "id": 8160,
+        "country": "PH",
+        "sunrise": 1718573246,
+        "sunset": 1718619989
+    },
+    "timezone": 28800,
+    "id": 1692193,
+    "name": "Pasay",
+    "cod": 200
+}
