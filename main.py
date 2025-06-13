@@ -3,7 +3,7 @@
 import json
 import requests
 import datetime as dt
-from dotenv import load_dotenv
+from dotenv import load_dotenv,find_dotenv
 import os
 from sys import platform
 import time
@@ -11,6 +11,7 @@ import time
 
 api_response = ""
 city = ""
+load_dotenv(find_dotenv())
 
 def clear_screen() -> None:
     if platform == 'win32':
@@ -25,7 +26,6 @@ def kelvin_to_fahrenheit(kelvin:float) -> float:
 
 # retrieve token from enviroment
 def get_key() -> str:
-    load_dotenv()
     return f"{os.getenv('TOKEN')}"
 
 # retrieve api data
@@ -51,6 +51,7 @@ while exit == 'n':
     print("="*40)
     api_response = get_weather_data(token = get_key())
     clear_screen()
+
     
     if api_response.status_code == 200:
         data = api_response.json()
@@ -67,8 +68,8 @@ while exit == 'n':
         print(f"Longtitude: {lon}")
         print("="*40)
         time = data["timezone"]
-        sunrise = dt.datetime.utcfromtimestamp(data["sys"]["sunrise"] + time).strftime("%I:%M %p") 
-        sunset = dt.datetime.utcfromtimestamp(data["sys"]["sunset"] + time).strftime("%I:%M %p")
+        sunrise = dt.datetime.fromtimestamp(data["sys"]["sunrise"] + time, dt.UTC).strftime("%I:%M %p")
+        sunset = dt.datetime.fromtimestamp(data["sys"]["sunset"] + time, dt.UTC).strftime("%I:%M %p")
         timezone = get_timezone(time)
         print(f"Timezone: {timezone}")
         print(f"Sunrise: {sunrise}")
