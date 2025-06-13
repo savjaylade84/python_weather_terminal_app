@@ -10,7 +10,7 @@ dependent packages
 <br>
 
 To Run The Code
-'my-venv/bin/python3 main.py'
+`my-venv/bin/python3 main.py`
 
 Author: John Jayson B. De Leon<br>
 Github: [savjaylade84](github.com/savjaylade84) <br>
